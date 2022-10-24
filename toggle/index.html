@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg
+      width="1280"
+      height="832"
+      viewBox="0 0 1280 832"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="toggle">
+        <rect
+          id="Rectangle1"
+          x="240"
+          y="216"
+          width="800"
+          height="400"
+          rx="200"
+          fill="#FF0000"
+        />
+        <circle id="Ellipse1" cx="450" cy="416" r="150" fill="white" />
+      </g>
+    </svg>
+
+    <style>
+      :root {
+        --off-back: #ff0000;
+        --on-back: #00e600;
+      }
+
+      #Rectangle1 {
+        cursor: pointer;
+        fill: var(--off-back);
+      }
+
+      #Ellipse1 {
+        cursor: pointer;
+        transform: translateX(0);
+      }
+
+      #Rectangle1,
+      #Ellipse1 {
+        transition: all 1s ease;
+      }
+
+      #toggle:hover > #Ellipse1 {
+        transform: translateX(380px);
+      }
+
+      #toggle:hover > #Rectangle1 {
+        fill: var(--on-back);
+      }
+    </style>
+  </body>
+</html>
